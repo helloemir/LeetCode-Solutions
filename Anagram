@@ -1,0 +1,11 @@
+# Instructions from LeetCode:
+# Given two strings s and t, return true if t is an anagram of s, and false otherwise.
+
+class Solution(object):
+    def isAnagram(self, word1, word2):
+        for c in word1:
+            if word1.count(c) == word2.count(c):
+                continue
+            else:
+                return False  # if there is a different number of a given word
+        return True
