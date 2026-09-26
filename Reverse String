@@ -1,0 +1,23 @@
+
+# Instructions from LeetCode:
+# Write a function that reverses a string. The input string is given as an array of characters s.
+# You must do this by modifying the input array in-place with O(1) extra memory.
+
+class Solution(object):
+    def reverseString(self, s):
+        iLeft = 0
+        iRight = len(s) - 1
+    
+        while iLeft < iRight:
+            temp = s[iLeft]
+            s[iLeft] = s[iRight]
+            s[iRight] = temp
+
+            iLeft += 1
+            iRight -= 1
+        
+        # For lists with odd number of characters, the program stops as iLeft and iRight becomes equal, and that index 
+        # they take will not be evaluated. But this is exactly what we want, as that is the middle value and
+        # should not be changed.
+        
+      
